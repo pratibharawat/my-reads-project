@@ -39,7 +39,7 @@ export default class Book extends Component {
                     </select>
                 </div>
                 </div>
-                <div className="book-title">{searchedBook.title}</div>
+                <div className="book-title">{searchedBook.title ? searchedBook.title : "No title available"}</div>
                 <div className="book-authors">
                     {searchedBook.authors ? searchedBook.authors.join(",") : ""}
                 </div>
