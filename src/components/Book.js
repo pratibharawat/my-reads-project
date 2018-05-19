@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import noCoverImage from '../icons/no-cover.png'
 
 export default class Book extends Component {
   static propTypes = {
@@ -22,7 +23,8 @@ export default class Book extends Component {
                         style={{
                             width: 128,
                             height: 193,
-                            backgroundImage: `url("${searchedBook.imageLinks.thumbnail}")`
+                            backgroundImage: `url("${searchedBook.imageLinks && searchedBook.imageLinks.thumbnail ? 
+                                                        searchedBook.imageLinks.thumbnail : noCoverImage}")`
                         }}
                     />
                 <div className="book-shelf-changer">
